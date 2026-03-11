@@ -1,6 +1,7 @@
 <?php
 
-$links = $database->query('SELECT * FROM links ORDER BY id DESC');
+
+$links = $database->query('SELECT * FROM links ORDER BY id DESC')->get();
 
 require __DIR__ . '/../../resources/links.template.php';
 

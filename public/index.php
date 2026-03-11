@@ -1,12 +1,13 @@
 <?php
-
-
+// Consulta a la base de datos para obtener las publicaciones más recientes
 require __DIR__ . '/../framework/database.php';
 $database = new Database();
 
+// Consulta si la url existe
 $routes = require __DIR__ . '/../routes/web.php';
 
-$requestUri = $_SERVER['REQUEST_URI'];
+// 
+$requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 $route = $routes[$requestUri] ?? null;
 
