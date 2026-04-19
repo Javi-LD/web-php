@@ -1,6 +1,8 @@
 <?php
 // Consulta a la base de datos para obtener las publicaciones más recientes
 require __DIR__ . '/../framework/database.php';
+require __DIR__ . '/../framework/validator.php';
+
 $database = new Database();
 
 // Consulta si la url existe
